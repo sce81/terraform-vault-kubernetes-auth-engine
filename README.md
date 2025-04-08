@@ -31,9 +31,10 @@ Configures Kubernetes Auth Engine for dynamic list of namespaces based on var.na
 
 ### Tested
 
-Terraform ~> 1.11.0
+Terraform ~> 1.11.0\
 Verified on AWS EKS but should be Cloud agnostic
 
 ### Outputs
 
    none
+
