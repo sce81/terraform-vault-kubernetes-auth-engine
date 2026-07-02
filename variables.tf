@@ -25,7 +25,12 @@ variable "kubernetes_ca_cert" {
   type = string
 }
 variable "token" {
-  type = string
+  type      = string
+  sensitive = true
+}
+variable "bound_service_account_names" {
+  type    = list(string)
+  default = ["default"]
 }
 variable "disable_local_ca_jwt" {
   type    = bool

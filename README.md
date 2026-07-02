@@ -68,6 +68,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 | ---- | ----------- | ---- | ------- | :------: |
+| <a name="input_bound_service_account_names"></a> [bound\_service\_account\_names](#input\_bound\_service\_account\_names) | n/a | `list(string)` | <pre>[<br/>  "default"<br/>]</pre> | no |
 | <a name="input_default_lease_ttl_seconds"></a> [default\_lease\_ttl\_seconds](#input\_default\_lease\_ttl\_seconds) | n/a | `number` | `43200` | no |
 | <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `"kubernetes secrets backend"` | no |
 | <a name="input_disable_local_ca_jwt"></a> [disable\_local\_ca\_jwt](#input\_disable\_local\_ca\_jwt) | n/a | `bool` | `false` | no |

@@ -12,7 +12,7 @@ resource "vault_kubernetes_auth_backend_config" "main" {
   kubernetes_ca_cert     = base64decode(var.kubernetes_ca_cert)
   token_reviewer_jwt     = var.token
   issuer                 = "api"
-  disable_iss_validation = "true"
+  disable_iss_validation = false
   depends_on             = [vault_auth_backend.main]
 }
 
@@ -20,7 +20,7 @@ resource "vault_kubernetes_auth_backend_role" "main" {
   namespace                        = var.namespace
   backend                          = vault_auth_backend.main.path
   role_name                        = "${var.namespace}-role"
-  bound_service_account_names      = ["*"]
+  bound_service_account_names      = var.bound_service_account_names
   bound_service_account_namespaces = [var.namespace]
   token_ttl                        = 3600
   token_policies                   = ["default"]
